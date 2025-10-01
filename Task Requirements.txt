@@ -1,0 +1,88 @@
+# Transformer Model Debugging Project - Requirements
+# Team 9 - Assignment 1: Debugging Transformer Models with PyCharm and WSL
+
+## Project Overview
+# This project involves debugging a standard encoder-decoder Transformer model
+# using PyCharm with WSL integration. The debugging captures 43 tensor snapshots
+# through all model layers to analyze data flow and dimension transformations.
+
+## Core Dependencies
+torch>=1.9.0                    # PyTorch deep learning framework
+torchvision>=0.10.0             # PyTorch vision utilities (if needed for data)
+numpy>=1.21.0                   # Numerical computing library
+matplotlib>=3.3.4               # Plotting and visualization (for analysis)
+tqdm>=4.62.0                    # Progress bars for training loops
+
+## Development Environment
+python>=3.8                     # Python 3.8 or higher required
+# PyCharm Professional Edition with WSL integration
+# Windows Subsystem for Linux (WSL2) with Ubuntu 20.04/22.04
+
+## Optional Dependencies (for extended functionality)
+pandas>=1.3.0                   # Data analysis and manipulation
+seaborn>=0.11.0                 # Statistical data visualization
+jupyter>=1.0.0                  # Jupyter notebooks for experimentation
+ipython>=7.28.0                 # Enhanced Python shell
+
+## Debugging and Testing
+pytest>=6.2.5                   # Testing framework
+pytest-cov>=2.12.1              # Test coverage reporting
+black>=21.10b0                  # Code formatting
+flake8>=4.0.1                   # Code linting
+
+## Model Configuration Specifications
+# - Architecture: Standard Encoder-Decoder Transformer (Vaswani et al., 2017)
+# - Embedding Dimension (d_model): 128
+# - Number of Attention Heads: 4
+# - Encoder Layers: 2
+# - Decoder Layers: 2
+# - Feed-Forward Dimension (d_ff): 512
+# - Vocabulary Size: 1000
+# - Sequence Length: 8 (source), 7 (target) tokens
+
+## Input Data Specifications
+# - Domain: Programming/Coding
+# - Source Token IDs: [100, 201, 302, 403, 504, 605, 706, 807]
+# - Target Token IDs: [150, 251, 352, 453, 554, 655, 756]
+# - Batch Size: 1
+# - Shape Convention: (sequence_length, batch_size, d_model)
+
+## Debugging Requirements
+# - PyCharm Professional with WSL Python interpreter
+# - Strategic breakpoints at each tensor transformation stage
+# - Real-time tensor shape and value inspection
+# - Step-through execution through forward pass
+# - Capture 43 mandatory snapshots as specified in assignment
+
+## Hardware Requirements (Recommended)
+# - CPU: Multi-core processor (Intel i5/i7 or AMD Ryzen 5/7)
+# - RAM: 8GB minimum, 16GB recommended
+# - Storage: 10GB free space for environments and data
+# - GPU: Optional (CUDA compatible for accelerated training)
+
+## Installation Commands
+# 1. Set up WSL with Ubuntu:
+#    wsl --install -d Ubuntu
+#
+# 2. Install Python and pip in WSL:
+#    sudo apt update && sudo apt install python3 python3-pip
+#
+# 3. Create virtual environment (recommended):
+#    python3 -m venv transformer_debug
+#    source transformer_debug/bin/activate
+#
+# 4. Install requirements:
+#    pip install -r requirements.txt
+
+## Running the Project
+# 1. Configure PyCharm to use WSL Python interpreter
+# 2. Set breakpoints in debug_transformer_flow() function
+# 3. Run in debug mode to capture all 43 tensor snapshots
+# 4. Use PyCharm variable inspector to examine tensor dimensions
+
+## Expected Output
+# - 43 tensor snapshots with shapes and values
+# - Complete data flow analysis from input to output logits
+# - Verification of shape consistency through all layers
+# - Analysis of attention mechanisms and residual connections
+
